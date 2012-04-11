@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:id="@+id/filerow">
+
+	<Button android:text="Load File" android:layout_alignParentTop="true"
+		android:id="@+id/loadButton" android:layout_width="wrap_content"
+		android:layout_height="wrap_content"></Button>
+	<TextView android:id="@+id/fileText" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="FileName"
+		android:layout_below="@+id/loadButton" />
+</TableRow>
+<TextView android:layout_width="fill_parent" android:id="@+id/mdfive"
+		android:text="MD5" android:layout_height="wrap_content" ></TextView>
+<TextView android:layout_width="fill_parent" android:id="@+id/fileSize"
+		android:text="File Size In Megabytes" android:layout_height="wrap_content" ></TextView>
+
+
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:id="@+id/buttonrow">
+		<Button android:id="@+id/splitbutton" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="Split" android:enabled='false'
+			android:layout_weight="1" />
+		<Button android:id="@+id/joinbutton" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="Join" android:enabled='false'
+			android:layout_weight="1" />
+
+	</TableRow>
+	<TextView android:id="@+id/splitsizeText"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="Split Size In Megabytes:" />
+
+	<EditText android:layout_width="fill_parent" android:numeric="decimal"
+		android:id="@+id/splitsize" android:text="1" android:layout_height="wrap_content"></EditText>
+		
+	<TextView android:layout_width="fill_parent" android:id="@+id/advancedusSize"
+		android:text="Advanced Users Only:" android:layout_height="wrap_content" ></TextView>
+
+	<Button android:id="@+id/multijoinbutton" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="Multi-File Join" android:enabled='true'
+			/>
+	
+
+	<com.google.ads.AdView android:id="@+id/adView"
+		android:layout_alignParentBottom="true" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" ads:adUnitId="a14dff80f51e331" ads:adSize="BANNER"
+		ads:loadAdOnCreate="true" />
+
+
+</LinearLayout>
